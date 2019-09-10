@@ -75,7 +75,7 @@ export default class Pajarito extends Component {
     return (
       <Router>
         <div className="Pajarito">
-          <Route exact path={'/le_cuenta_un_pajarito/'} render={props => (
+          <Route exact path="/le-cuenta-un-pajarito/" render={props => (
             <>
               <div className="Pajarito_img--home"></div>
               <section className="Pajarito_text--home">
@@ -117,16 +117,16 @@ export default class Pajarito extends Component {
                       ({this.state.localData.colors} colores)</span>.
                   </p>
                   {/* 6 */}<p>Por su seguridad! Lea
-                    mi <Link to='/le_cuenta_un_pajarito/piolitica/'>piolítica de privacidad</Link> y
+                    mi <Link to="/le-cuenta-un-pajarito/piolitica/">piolítica de privacidad</Link> y
                     siéntase más tranquilo.
                   </p>
                 </div>
               </section>
             </>
           )} />
-          <Route path='/le_cuenta_un_pajarito/piolitica' render={props => (
+          <Route path="/le-cuenta-un-pajarito/piolitica" render={props => (
             <>
-              <Link className="back_btn" to='/le_cuenta_un_pajarito/'>{'<'}</Link>
+              <Link className="back_btn" to="/le-cuenta-un-pajarito/">{'<'}</Link>
               <div className="Pajarito_img--piolitica">
               </div>
               <section className="Pajarito_text--piolitica">
