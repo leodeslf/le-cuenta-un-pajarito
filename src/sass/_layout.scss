@@ -96,7 +96,7 @@
   height: 40px;
   width: 40px;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   position: absolute;
   right: 64px;
   bottom: 64px;
@@ -126,5 +126,19 @@
 
   .text-holder--home {
     max-width: 600px;
+  }
+
+  .back_btn {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Pajarito_text--home {
+    padding: 32px;
+  }
+  * {
+    font-size: $font-size--small;
   }
 }
