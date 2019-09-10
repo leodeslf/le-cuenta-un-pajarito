@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/le-cuenta-un-pajarito/precache-manifest.2f5be8e6c91fdbb24061e8783fddb92c.js"
+  "/le-cuenta-un-pajarito/precache-manifest.f665200dd01806655d96833109e6fb31.js"
 );
 
 self.addEventListener('message', (event) => {
