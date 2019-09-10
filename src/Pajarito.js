@@ -76,8 +76,15 @@ export default class Pajarito extends Component {
       <Router>
         <div className="Pajarito">
           <Route exact path="/le-cuenta-un-pajarito/" render={props => (
-            <>
-              <img src="/le-cuenta-un-pajarito/Final_alpha.png" alt="A bird." />
+            <>{/* /le-cuenta-un-pajarito/ */}
+              <div className="img-box">
+                <img src="/le-cuenta-un-pajarito/Final_alpha.png"
+                  alt="A bird."
+                  className="Pajarito_img--home" />
+                <img src="/le-cuenta-un-pajarito/Final_happy_alpha_alt.png"
+                  alt="A blinking bird."
+                  className="Pajarito_img-blink--home" />
+              </div>
               <section className="Pajarito_text--home">
                 <div className="text-holder--home">
                   {/* 1 */}<p>Pio.</p>
@@ -124,10 +131,12 @@ export default class Pajarito extends Component {
               </section>
             </>
           )} />
-          <Route path="/le-cuenta-un-pajarito/piolitica" render={props => (
-            <>
+          <Route path="/le-cuenta-un-pajarito/piolitica/" render={props => (
+            <>{/* /le-cuenta-un-pajarito/piolitica/ */}
               <Link className="back_btn" to="/le-cuenta-un-pajarito/">{'<'}</Link>
-              <img src="/le-cuenta-un-pajarito/Piolitica.png" alt="A piolitic bird." />
+              <img src="/le-cuenta-un-pajarito/piolitica/Piolitica.png"
+                alt="A piolitic bird."
+                className="Pajarito_img--piolitica" />
               <section className="Pajarito_text--piolitica">
                 <div className="text-holder--piolitica">
                   <p>No diré nada n.n</p>
