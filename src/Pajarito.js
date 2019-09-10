@@ -134,7 +134,7 @@ export default class Pajarito extends Component {
           <Route path="/le-cuenta-un-pajarito/piolitica/" render={props => (
             <>{/* /le-cuenta-un-pajarito/piolitica/ */}
               <Link className="back_btn" to="/le-cuenta-un-pajarito/">{'<'}</Link>
-              <img src="/le-cuenta-un-pajarito/piolitica/Piolitica.png"
+              <img src="/le-cuenta-un-pajarito/Piolitica.png"
                 alt="A piolitic bird."
                 className="Pajarito_img--piolitica" />
               <section className="Pajarito_text--piolitica">
