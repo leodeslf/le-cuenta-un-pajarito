@@ -77,7 +77,7 @@ export default class Pajarito extends Component {
         <div className="Pajarito">
           <Route exact path="/le-cuenta-un-pajarito/" render={props => (
             <>
-              <img src="/le-cuenta-un-pajarito/src/images/Final_alpha.png" />
+              <img src="Final_alpha.png" alt="A bird." />
               <section className="Pajarito_text--home">
                 <div className="text-holder--home">
                   {/* 1 */}<p>Pio.</p>
