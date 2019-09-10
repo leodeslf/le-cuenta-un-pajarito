@@ -33,7 +33,6 @@ export default class Pajarito extends Component {
         district: GEO_DATA.district,
         city: GEO_DATA.state_prov,
         country: GEO_DATA.country_name,
-        previous: document.referrer,
       }
     });
     this.updateData();
@@ -300,12 +299,6 @@ async function getLocalData() {
     colorDepth: window.screen.colorDepth,
   }
 }
-
-/* function Piolitica() {
-  return (
-    <p></p>
-  )
-} */
 
 // https://api.ipgeolocation.io/ipgeo?apiKey=15d8e57eb4aa4015bb32a04d73b67b19
 // http://webkay.robinlinus.com/

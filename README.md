@@ -1,5 +1,5 @@
 # Le cuenta un pajarito
 
-El pajarito más inutil de la web :)
+El pajarito más inútil de la web :)
 
-Creado para conocer el "paquete" de información de cada usuario expone al acceder a una web en internet.
+Creado para familiarizarme com el "paquete" de información que cada usuario expone al acceder a una web en internet.
