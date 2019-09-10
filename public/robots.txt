@@ -1,2 +1,12 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+
+################################
+#
+#   You are not a robot.
+#
+#   Do me a favour please...
+#
+#   GERRARA HERE!
+#
+################################

@@ -1,0 +1,82 @@
+$bg: white;
+$bg--alt: white;
+
+$color-a: #0e0e0e;
+$color-b: #808080;
+$color-c: #e4e4e4;
+
+$font-size--big: 1.5rem;
+$font-size--normal: 16px; // 1rem
+$font-size--small: 0.75rem; // 0.75rem
+
+$fast-time: 250ms;
+$med-time: 360ms;
+$slow-time: 480ms;
+$x-slow-time: 680ms;
+
+@keyframes blk {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.01% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  33.01% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  90.01% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 1;
+  }
+  93.01% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.01% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  99.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes t_h_appear {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes t_v_appear {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
