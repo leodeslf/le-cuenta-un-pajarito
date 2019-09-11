@@ -80,10 +80,12 @@ export default class Pajarito extends Component {
               <div className="img-box">
                 <img src="/le-cuenta-un-pajarito/Final_alpha.png"
                   alt="A bird."
-                  className="Pajarito_img--home" />
+                  className="Pajarito_img--home"
+                  draggable="false" />
                 <img src="/le-cuenta-un-pajarito/Final_happy_alpha_alt.png"
                   alt="A blinking bird."
-                  className="Pajarito_img-blink--home" />
+                  className="Pajarito_img-blink--home"
+                  draggable="false" />
               </div>
               <section className="Pajarito_text--home">
                 <div className="text-holder--home">
@@ -136,7 +138,8 @@ export default class Pajarito extends Component {
               <Link className="back_btn" to="/le-cuenta-un-pajarito/">{'<'}</Link>
               <img src="/le-cuenta-un-pajarito/Piolitica.png"
                 alt="A piolitic bird."
-                className="Pajarito_img--piolitica" />
+                className="Pajarito_img--piolitica"
+                draggable="false" />
               <section className="Pajarito_text--piolitica">
                 <div className="text-holder--piolitica">
                   <p>No diré nada n.n</p>
