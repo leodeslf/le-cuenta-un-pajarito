@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/le-cuenta-un-pajarito/static/css/main.e7c0c871.chunk.css",
-    "main.js": "/le-cuenta-un-pajarito/static/js/main.0120fa38.chunk.js",
-    "main.js.map": "/le-cuenta-un-pajarito/static/js/main.0120fa38.chunk.js.map",
+    "main.css": "/le-cuenta-un-pajarito/static/css/main.a156c6cc.chunk.css",
+    "main.js": "/le-cuenta-un-pajarito/static/js/main.021a1e5d.chunk.js",
+    "main.js.map": "/le-cuenta-un-pajarito/static/js/main.021a1e5d.chunk.js.map",
     "runtime~main.js": "/le-cuenta-un-pajarito/static/js/runtime~main.6be4ba8b.js",
     "runtime~main.js.map": "/le-cuenta-un-pajarito/static/js/runtime~main.6be4ba8b.js.map",
     "static/js/2.9e897f10.chunk.js": "/le-cuenta-un-pajarito/static/js/2.9e897f10.chunk.js",
     "static/js/2.9e897f10.chunk.js.map": "/le-cuenta-un-pajarito/static/js/2.9e897f10.chunk.js.map",
     "index.html": "/le-cuenta-un-pajarito/index.html",
-    "precache-manifest.2781b3420aaee04bcdfbaddfb62dba4a.js": "/le-cuenta-un-pajarito/precache-manifest.2781b3420aaee04bcdfbaddfb62dba4a.js",
+    "precache-manifest.2f29932f68e6870c900e225438e577e6.js": "/le-cuenta-un-pajarito/precache-manifest.2f29932f68e6870c900e225438e577e6.js",
     "service-worker.js": "/le-cuenta-un-pajarito/service-worker.js",
-    "static/css/main.e7c0c871.chunk.css.map": "/le-cuenta-un-pajarito/static/css/main.e7c0c871.chunk.css.map"
+    "static/css/main.a156c6cc.chunk.css.map": "/le-cuenta-un-pajarito/static/css/main.a156c6cc.chunk.css.map"
   }
 }
