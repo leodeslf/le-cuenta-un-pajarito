@@ -111,13 +111,13 @@ export default class Pajarito extends Component {
                   {/* 5 */}<p>
                     {(this.state.localData.usedScreen < 50) &&
                       <>
-                        Le pio por favor agrande la ventana, ocupo apenas un
+                        Le <em>pio</em> por favor agrande la ventana, ocupo apenas un
                         <span className="data"> {this.state.localData.usedScreen}% </span>
                       </>
                     }
                     {(this.state.localData.usedScreen >= 50) &&
                       <>
-                        Parece que tengo pioridad, cubro
+                        Parece que tengo <em>pio</em>ridad, cubro
                         <span className="data"> {this.state.localData.usedScreen}% </span>
                       </>
                     }
@@ -126,7 +126,7 @@ export default class Pajarito extends Component {
                       ({this.state.localData.colors} colores)</span>.
                   </p>
                   {/* 6 */}<p>Por su seguridad! Lea
-                    mi <Link to="/le-cuenta-un-pajarito/piolitica/">piolítica de privacidad</Link> y
+                    mi <Link to="/le-cuenta-un-pajarito/piolitica/"><em>pio</em>lítica de privacidad</Link> y
                     siéntase más tranquilo.
                   </p>
                 </div>

@@ -161,6 +161,10 @@ p {
   margin-bottom: 1em;
 }
 
+em {
+  font-style: italic;
+}
+
 .Pajarito {
   width: 100vw;
   height: 100vh;
