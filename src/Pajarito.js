@@ -27,22 +27,16 @@ export default class Pajarito extends Component {
   async componentDidMount() {
     const GEO_DATA = await getGeoData();
     this.setState({
-      remoteData: {
-        ip: GEO_DATA.ip,
-        isp: GEO_DATA.isp,
-        district: GEO_DATA.district,
-        city: GEO_DATA.state_prov,
-        country: GEO_DATA.country_name,
-      }
+      remoteData: { ...GEO_DATA }
     });
     this.updateData();
   }
 
   async updateData() {
     const LOCAL_DATA = await getLocalData();
+    const COL = 2 ** LOCAL_DATA.colorDepth;
     // Adding punctuation to a long number
     // E.g.: 120000 to 120.000
-    const COL = 2 ** LOCAL_DATA.colorDepth;
     const LEN = COL.toString().length;
     const STR = COL.toString();
     let read = [];
@@ -74,21 +68,21 @@ export default class Pajarito extends Component {
   render() {
     return (
       <Router>
-        <div className="Pajarito">
-          <Route exact path="/le-cuenta-un-pajarito/" render={props => (
-            <>{/* /le-cuenta-un-pajarito/ */}
-              <div className="img-box">
-                <img src="/le-cuenta-un-pajarito/Final_alpha.png"
+        <div className="bird">
+          <Route exact path="/le-cuenta-un-pajarito/" render={() => (
+            <div className="body body--home">
+              <div className="img-container">
+                <img className="bird-img--base"
+                  src="/le-cuenta-un-pajarito/Final_alpha.png"
                   alt="A bird."
-                  className="Pajarito_img--home"
                   draggable="false" />
-                <img src="/le-cuenta-un-pajarito/Final_happy_alpha_alt.png"
+                <img className="bird-img--blink"
+                  src="/le-cuenta-un-pajarito/Final_happy_alpha_alt.png"
                   alt="A blinking bird."
-                  className="Pajarito_img-blink--home"
                   draggable="false" />
               </div>
-              <section className="Pajarito_text--home">
-                <div className="text-holder--home">
+              <section className="message-container">
+                <div className="message">
                   {/* 1 */}<p>Pio.</p>
                   {/* 2 */}<p>Le cuento:</p>
                   {/* 3 */}<p>Trino desde{' '}
@@ -111,41 +105,48 @@ export default class Pajarito extends Component {
                   {/* 5 */}<p>
                     {(this.state.localData.usedScreen < 50) &&
                       <>
-                        Le <em>pio</em> por favor agrande la ventana, ocupo apenas un
-                        <span className="data"> {this.state.localData.usedScreen}% </span>
+                        Ocupo apenas un <span className="data">{this.state.localData.usedScreen}%</span>
                       </>
                     }
                     {(this.state.localData.usedScreen >= 50) &&
                       <>
-                        Parece que tengo <em>pio</em>ridad, cubro
-                        <span className="data"> {this.state.localData.usedScreen}% </span>
+                        Parece que tengo pio-ridad cubro{' '}
+                        <span className="data">{this.state.localData.usedScreen}%</span>
                       </>
                     }
-                    de su pantalla, un componente con profundidad de color de
+                    {' '}de su pantalla, un componente con profundidad de color de
                     <span className="data"> {this.state.localData.colorDepth} bits
                       ({this.state.localData.colors} colores)</span>.
                   </p>
                   {/* 6 */}<p>Por su seguridad! Lea
-                    mi <Link to="/le-cuenta-un-pajarito/piolitica/"><em>pio</em>lítica de privacidad</Link> y
+                    mi <Link to="/le-cuenta-un-pajarito/piolitica/">pio-lítica de privacidad</Link> y
                     siéntase más tranquilo.
                   </p>
                 </div>
               </section>
-            </>
+            </div>
           )} />
           <Route path="/le-cuenta-un-pajarito/piolitica/" render={props => (
-            <>{/* /le-cuenta-un-pajarito/piolitica/ */}
-              <Link className="back_btn" to="/le-cuenta-un-pajarito/">{'<'}</Link>
-              <img src="/le-cuenta-un-pajarito/Piolitica.png"
-                alt="A piolitic bird."
-                className="Pajarito_img--piolitica"
-                draggable="false" />
-              <section className="Pajarito_text--piolitica">
-                <div className="text-holder--piolitica">
-                  <p>No diré nada n.n</p>
+            <div className="body body--piolitic">
+              <section className="message-container">
+                <div className="message">
+                  <p>No diré nada <span role="img" aria-label="innocent">😊</span></p>
                 </div>
               </section>
-            </>
+              <div className="img-container">
+                <img className="bird-img--piolitic"
+                  src="/le-cuenta-un-pajarito/Piolitica.png"
+                  alt="A piolitic bird."
+                  draggable="false" />
+              </div>
+              <Link className="back_btn" to="/le-cuenta-un-pajarito/">
+                <span>
+                  <svg viewBox="0 0 24 24" className="svg-24">
+                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                  </svg>
+                </span>
+              </Link>
+            </div>
           )} />
         </div>
       </Router>
@@ -153,6 +154,9 @@ export default class Pajarito extends Component {
   }
 }
 
+/**
+ * Data from local internet
+ */
 async function getGeoData() {
   const RES = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=15d8e57eb4aa4015bb32a04d73b67b19');
   if (RES.status > 200) return RES.status;
@@ -162,18 +166,21 @@ async function getGeoData() {
       ip: RES_JSON.ip,
       isp: RES_JSON.isp,
       district: RES_JSON.district,
-      state_prov: RES_JSON.state_prov,
-      country_name: RES_JSON.country_name,
+      city: RES_JSON.state_prov,
+      country: RES_JSON.country_name,
       //country_flag: RES_JSON.country_flag,
     };
   }
 }
 
+/**
+ * Data from local machine
+ */
 async function getLocalData() {
   const AGENT = window.navigator.userAgent;
   const VER = window.navigator.appVersion;
   let browser = navigator.appName;
-  let browserVer = '' + parseFloat(navigator.appVersion);
+  let browserVer = parseFloat(navigator.appVersion);
   let browserMajorVer = parseInt(navigator.appVersion, 10);
   let vOff = undefined;
   let ix = undefined;
