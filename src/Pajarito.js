@@ -110,7 +110,7 @@ export default class Pajarito extends Component {
                     }
                     {(this.state.localData.usedScreen >= 50) &&
                       <>
-                        Parece que tengo pio-ridad cubro{' '}
+                        Parece que tengo pio-ridad, cubro{' '}
                         <span className="data">{this.state.localData.usedScreen}%</span>
                       </>
                     }
