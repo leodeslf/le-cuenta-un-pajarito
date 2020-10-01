@@ -40,13 +40,17 @@
 }
 
 .body--piolitic {
-  display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
   .message-container {
     margin-bottom: 0;
+    padding-top: 2rem;
+    .message {
+      margin: 0 auto;
+      min-width: fit-content;
+    }
     .message::before {
       content: "";
       border-left: 0.5rem solid transparent;
@@ -73,7 +77,6 @@
   background-color: $bg;
   border-radius: 0.5rem;
   filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, 0.1)) drop-shadow(-2px 2px 6px rgba(0, 0, 0, 0.1));
-  height: fit-content;
   max-width: 70ch;
   min-width: 40ch;
   padding: 2rem;
