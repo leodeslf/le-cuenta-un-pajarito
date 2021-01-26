@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1cdf2bf9860ae658edbb8a982f140ea9",
+    "revision": "d0e11ec7720a4fda95e3a6a1a9e1623f",
     "url": "/le-cuenta-un-pajarito/index.html"
   },
   {
-    "revision": "6f692a632ee4ae8985db",
+    "revision": "df478ca0561d9ffcac55",
     "url": "/le-cuenta-un-pajarito/static/css/main.8b542347.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/le-cuenta-un-pajarito/static/js/2.8238a278.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f692a632ee4ae8985db",
-    "url": "/le-cuenta-un-pajarito/static/js/main.c7a54369.chunk.js"
+    "revision": "df478ca0561d9ffcac55",
+    "url": "/le-cuenta-un-pajarito/static/js/main.04ef58b3.chunk.js"
   },
   {
     "revision": "02998991a521caacf9bd",
