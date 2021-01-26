@@ -166,7 +166,7 @@ async function getGeoData() {
       ip: RES_JSON.ip,
       isp: RES_JSON.isp,
       district: RES_JSON.district,
-      city: RES_JSON.state_prov,
+      city: RES_JSON.city,
       country: RES_JSON.country_name,
       //country_flag: RES_JSON.country_flag,
     };
